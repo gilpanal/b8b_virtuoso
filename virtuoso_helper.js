@@ -2,7 +2,7 @@
 import { Node, Data, Triple } from 'virtuoso-sparql-client'
 import { owl } from './bot.js'
 
-const prf = 'b8b'
+const prf = 'b8b:'
 
 class Virtuoso_Helper {
 
