@@ -1,4 +1,4 @@
-const MODE = 'PROD' // DEV, STAGE, PROD
+const MODE = 'DEV' // DEV, STAGE, PROD
 
 const ENVIRONMENTS = {
     PROD : {

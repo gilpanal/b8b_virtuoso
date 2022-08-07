@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^3.2.10",
-    "telegraf": "^4.8.6"
+    "telegraf": "^4.8.6",
+    "virtuoso-sparql-client": "^0.2.2"
   }
 }
