@@ -26,7 +26,7 @@ class Virtuoso_Helper {
         await this.insertPredictionInfo(message.audio.file_unique_id, predictionInfo)
         const labs = Object.keys(labelsInfo)
         for (let label of labs) {
-            this.insertLabelInfo(predictionInfo.predict_id, labelsInfo[label])
+            await this.insertLabelInfo(predictionInfo.predict_id, labelsInfo[label])
         }
         let status = 'Something went with Virtuoso!'
         // false/true => verbose
