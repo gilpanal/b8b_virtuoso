@@ -24,7 +24,7 @@ class Bot_Helper {
             error: null
         }
 
-        const audioContent = message.audio || message.voice
+        const audioContent = message.audio || message.voice || message.document
         const telegram_info = await this.fetchFileInfo(audioContent.file_id, {})
         
         if (telegram_info.ok) {
@@ -34,6 +34,8 @@ class Bot_Helper {
             if (!dataJson.error) {
                 result.ok = true
                 result.result = dataJson
+            } else {
+                result.error = dataJson
             }
         } else {
             console.log(telegram_info)

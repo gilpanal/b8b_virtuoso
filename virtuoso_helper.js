@@ -11,7 +11,9 @@ class Virtuoso_Helper {
         this.saveclient = saveclient
     }
     async store(chat_id, message, predictionInfo) {
-
+        if(message.voice || message.document){
+            message['audio'] = message.voice || message.document
+        }
         message.audio['message_id'] = message.message_id
         message.audio['date'] = message.date
         delete message.message_id;
