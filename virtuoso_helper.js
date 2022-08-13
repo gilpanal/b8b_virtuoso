@@ -1,6 +1,7 @@
 /* https://github.com/crs4/virtuoso-sparql-client#insertion-triples */
 import { Node, Data, Triple } from 'virtuoso-sparql-client'
 import { owl } from './bot.js'
+import {storeResultsExperiment1} from './store_results.js'
 
 const prf = 'b8b:'
 
@@ -16,6 +17,9 @@ class Virtuoso_Helper {
         }
         message.audio['message_id'] = message.message_id
         message.audio['date'] = message.date
+
+        await storeResultsExperiment1(message.audio,predictionInfo)
+
         delete message.message_id;
         delete message.date;
 
@@ -33,7 +37,7 @@ class Virtuoso_Helper {
         let status = 'Something went with Virtuoso!'
         // false/true => verbose
         await this.saveclient.store(false).then((result) => {
-            console.log(result)
+            //console.log(result)
             if (result[0].statusCode) {
                 status = 'Virtuoso: ' + result[0].statusMessage
             } else {
