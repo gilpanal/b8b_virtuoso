@@ -29,7 +29,9 @@ export async function storeResultsExperiment1(audio, predictionInfo) {
         // this is valid due naming of files: <instrument><index>
         let instrument_name = audio.file_name
         instrument_name = removeExtension(instrument_name)
-        instrument_name = instrument_name.slice(0, -1);
+        //remove numbers from file name to get the instrument label
+        // Example: harp12 => harp
+        instrument_name = instrument_name.replace(/\d+/g, '')
 
         ExperimentResult = {}
         ExperimentResult['file_name'] = audio.file_name //when file_name is too long Telegram cuts it        
