@@ -15,7 +15,7 @@ const ENVIRONMENTS = {
     }
 }
 
-module.exports = {
+export default  {
     TELEGRAM_TOKEN: ENVIRONMENTS[MODE].TELEGRAM_TOKEN,
     DATABASE_URL: ENVIRONMENTS[MODE].DATABASE_URL  
 }
