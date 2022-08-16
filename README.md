@@ -16,7 +16,7 @@ This repository is part of the Beat Byte Bot Ecosystem (B8B).
 
 ## How to run and test it locally:
 1. ```git clone https://github.com/gilpanal/b8b_virtuoso.git```
-2. ```cd b8b_synapse```
+2. ```cd b8b_virtuoso```
 3. ```npm i```
 4. Rename `config/env_vars_template.js` to `config/env_vars.js` and include the Bot Token
 5. Start the main server by typing ```npm start```
@@ -31,7 +31,7 @@ This repository is part of the Beat Byte Bot Ecosystem (B8B).
 
 2.- By default it's assumed that Virtuoso instance is running at `http://127.0.0.1:8890/sparql`. You can point a different host changing the address at `bot.js`
 
-3.- NOTE: In `config/env_vars.js` file there's a variable named MODE that is meant for deploying to different environments, PROD, STAGE or DEV. For local development is enough with the following configuration:
+3.- In `config/env_vars.js` file there's a variable named MODE that is meant for deploying to different environments, PROD, STAGE or DEV. For local development is enough with the following configuration:
 
 >       const MODE = 'DEV' // DEV, STAGE, PROD
 >       const ENVIRONMENTS = {
