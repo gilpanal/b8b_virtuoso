@@ -23,7 +23,9 @@ export async function storeResultsExperiment1(audio, predictionInfo) {
     let fetchCurrentData = await fetch(RESULTS_ENPOINT)
     let jsonIs = await fetchCurrentData.json()
     let ExperimentResult = null
-
+    if(!audio.file_name){
+        audio.file_name = audio.file_unique_id + '.ogg'
+    }
     if (!jsonIs[audio.file_name]) {
 
         // this is valid due naming of files: <instrument><index>
