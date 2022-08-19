@@ -2,7 +2,10 @@ import fetch from 'node-fetch'
 
 const RESULTS_ENPOINT = 'http://localhost:3001/files'
 
-const validClasses = ['guitar', 'drums', 'piano', 'violin', 'vocal', 'female', 'male', 'singing', 'vocals', 'harpsichord', 'flute', 'woman', 'male vocal', 'sitar', 'man', 'classic', 'choir', 'voice', 'male voice', 'female vocal', 'harp', 'cello', 'female voice', 'choral']
+//const validClasses = ['guitar', 'drums', 'piano', 'violin', 'vocal', 'female', 'male', 'singing', 'vocals', 'harpsichord', 'flute', 'woman', 'male vocal', 'sitar', 'man', 'classic', 'choir', 'voice', 'male voice', 'female vocal', 'harp', 'cello', 'female voice', 'choral']
+
+// including 'opera' as equivalent to 'voice' to bridge the semantic gap
+const validClasses = ['guitar', 'drums', 'piano', 'violin', 'vocal', 'female', 'opera', 'male', 'singing', 'vocals', 'harpsichord', 'flute', 'woman', 'male vocal', 'sitar', 'man', 'classic', 'choir', 'voice', 'male voice', 'female vocal', 'harp', 'cello', 'female voice', 'choral']
 
 function removeExtension(filename) {
     return filename.substring(0, filename.lastIndexOf('.')) || filename;
