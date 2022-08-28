@@ -50,10 +50,11 @@ export async function storeResultsExperiment1(audio, predictionInfo) {
         ExperimentResult = jsonIs[audio.file_name]
     }
     ExperimentResult['execs'].push(predictionInfo)
-    sendPost(ExperimentResult)
+    await sendPost(ExperimentResult)
+    return predictionInfo
 }
 
-function sendPost(newPred) {
+async function sendPost(newPred) {
 
     fetch(RESULTS_ENPOINT, {
         method: 'POST',

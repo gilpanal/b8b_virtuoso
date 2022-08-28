@@ -18,8 +18,10 @@ class Virtuoso_Helper {
         message.audio['message_id'] = message.message_id
         message.audio['date'] = message.date
 
-        await storeResultsExperiment1(message.audio,predictionInfo)
-
+        // if we don't want to do B8B Analisis just comment the line below       
+        // It overrides the predictionInfo with only the instruments, which means
+        // other labels not related to instruments will be added (classical, strings, etc)
+        predictionInfo = await storeResultsExperiment1(message.audio,predictionInfo)
         delete message.message_id;
         delete message.date;
 
