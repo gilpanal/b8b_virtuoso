@@ -47,7 +47,7 @@ Default Data Set Name (Graph IRI):
 http://beatbytebot.web.app/resource/
 
 Query Text:
-PREFIX b8b:  <http://beatbytebot.web.app/ontology/>
+`PREFIX b8b:  <http://beatbytebot.web.app/ontology/>`
 
 ...
 
