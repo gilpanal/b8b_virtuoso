@@ -40,6 +40,10 @@ This repository is part of the Beat Byte Bot Ecosystem (B8B).
 >               DATABASE_URL: ''
 >           },
 
+4.- Two different ontologies are included in the folder `ontology`. One is generated via Protégé, entitled `beat_byte_bot.owl`and the other, `b8bontology.ttl`, is meant to be used with the project Ontology Visualization: https://github.com/usc-isi-i2/ontology-visualization/issues/18. More info: https://www.w3.org/2018/09/rdf-data-viz/
+
+![Alt text](./ontology/example-ontology-visualization.svg)
+<img src="./ontology/example-ontology-visualization.svg">
 
 ## Some SPARQL queries:
 
